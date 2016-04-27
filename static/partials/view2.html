@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+      <div class='col-md-8' ng-controller="view2Controller">
+	    <div class="row">
+	      <div class='col-md-8' ng-controller='productsController'>
+	        <h2>Quantities Controller</h2>
+	          <table class="table table-hover">
+	            <thead>
+	              <tr>
+	                <th>Product Name</th>
+	                <th>Product Price</th>
+	                <th>Actions</th>
+	              </tr>
+	            </thead>
+	            <tbody ng-repeat="product in products">
+	              <tr>
+	                <td>{{ product.Name }}</td>
+	                <td>{{ product.Price }}</td>
+	                <td><button type="button" class="btn btn-danger" ng-click='removeProduct(product)'>Remove Product</button></td>
+	              </tr>
+	            </tbody>
+	        </table>
+	    </div>
+	</div>
+</div>    
