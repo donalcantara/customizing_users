@@ -8,14 +8,14 @@
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <title></title>
- <!-- THESE TWO VERSIONS BELOW MUST MATCH!!!! -->
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
     
     <script>
-    //  inject the ngRoute dependency in the module.
+
     var myApp = angular.module('myApp', ['ngRoute']);
-    //  use the config method to set up routing:
+
       myApp.config(function ($routeProvider) {
         $routeProvider
           .when('/',{
@@ -33,19 +33,19 @@
       });
       
       myApp.factory('productFactory', function (){
-          // The factory is nothing more than a function that returns an object
+
         var products = [
               {Name: 'Alex', Price: "$23.99"}, 
               {Name: 'Erin', Price: "$33.99"}, 
               {Name: 'Erick', Price: "$88.99"}
         ];
         var factory = {};
-        // Add a getStudents key to the factory object with a value of a function.
+
         factory.getProducts = function (callback){
-            // Pass the students to a callback to be used by whoever calls the method
+
             callback(products);
         }
-          // Most important step: return the object so it can be used by the rest of our angular code
+
         return factory;
       });
 
@@ -62,11 +62,11 @@
         }
 
         $scope.removeProduct = function (product){
-          //  indexOf() calculates the index of the item whose value matches what we pass it.  Look it up!
+          //  indexOf() calculates the index of the item whose value matches what we pass it
           $scope.products.splice($scope.products.indexOf(product), 1);
         }
       });
-    //  build the controllers
+
       myApp.controller('view1Controller', function ($scope) {
       });
       myApp.controller('view2Controller', function ($scope) {
